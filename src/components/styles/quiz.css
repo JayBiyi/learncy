@@ -1,0 +1,7 @@
+.quiz{
+    margin: 0 auto 0 auto;
+    width: fit-content;
+    position: relative;
+    font-size: 3rem;
+    top: 100px;
+}

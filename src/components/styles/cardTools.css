@@ -1,0 +1,42 @@
+.card-tools-panel {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  z-index: 1000;
+}
+.tool-icn {
+  border: 0.5px solid rgb(189, 189, 189);
+  border-radius:5px;
+  background-color: transparent;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -ms-border-radius:5px;
+  -o-border-radius:5px;
+}
+.add-btn{
+  padding: 1px 10px;
+  border-radius: 10px;
+  font-size: 2em;
+  border: 1px solid #6C60E0;
+  color: #6C60E0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+@media screen and (min-width: 768px) {
+  .card-tools-panel {
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+    right: 40px;
+    box-sizing: border-box;
+    height: 250px;
+    padding: 40px 0;
+  }
+  .tool-icn {
+    margin: 5px;
+  }
+}
+

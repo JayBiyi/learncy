@@ -1,13 +1,238 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&family=Work+Sans&display=swap");
+/* @import url("https://fonts.googleapis.com/icon?family=Material+Icons"); */
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+#root{
+  min-height: 100vh;
+}
+.eyes1 {
+  transform-box: fill-box;
+  transform-origin: center;
+
+  -webkit-animation: blink 5s infinite;
+  animation: blink 5s infinite;
+  transition: all 0.15s;
+}
+:root {
+  --font-greet: "Rubik", sans-serif;
+  --font-main: "Work Sans", sans-serif;
+  --color-primary: #753dd0;
+  --bG: linear-gradient(
+    45deg,
+    rgba(93, 13, 93, 1) 0%,
+    rgba(186, 31, 209, 1) 41%,
+    rgba(255, 0, 172, 1) 100%
+  );
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@keyframes blink {
+  0%,
+  90%,
+  100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0);
+  }
+}
+* {
+  font-family: var(--font-main);
+}
+
+.mouth {
+  transform-box: fill-box;
+  transform-origin: center;
+
+  transition: transform 2s;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+#root {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+.mascot {
+  margin: 0 auto;
+  padding: 0 0 0 0;
+  width: 130px;
+  height: 130px;
+  
+}
+.mascot svg {
+  width: 130px;
+  
+}
+
+/* svg {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+} */
+* {
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 6px hsl(0deg 0% 0% / 0.3);
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 20px 20px;
+  background: white;
+  border-radius: 8px;
+}
+span {
+  font-family: inherit;
+}
+input {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 #00000008 inset;
+  margin-bottom: 30px;
+}
+.button {
+  margin: 0 auto;
+  font-family: var(--font-main);
+  font-size: 0.75rem;
+  border: 0.175em solid;
+  padding: 1.4em 3.3em;
+  color: rgb(0, 0, 0);
+  /* text-transform: uppercase; */
+  letter-spacing: 0.25em;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: background 500ms ease-in-out, color 500ms ease-in-out;
+
+  background-image: linear-gradient(
+    45deg,
+    transparent 50%,
+    var(--color-primary) 50%
+  );
+
+  background-position: 25%;
+  background-size: 400%;
+}
+
+.button:hover {
+  color: rgb(255, 255, 255);
+  border-color: var(--color-primary);
+  background-position: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+
+@media screen and (min-width: 480px) {
+  form {
+    max-width: 400px;
+  }
+}
+.home {
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+.img {
+  width: 50px;
+  margin: 10px auto;
+  color: rgb(82, 89, 171);
+  height: 50px;
+}
+
+/* main{
+  min-height: 100vh;
+} */
+.nav-icn {
+  border: none;
+  margin: 5px auto;
+  align-self: center;
+  padding: 8px 12px;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+}
+nav {
+  display: flex;
+  background: rgb(32, 35, 42);
+  color: rgb(150, 150, 150);
+  height: 50px;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.app {
+  height: 100vh;
+  background-color: #f1f5fb;
+}
+
+
+.logo {
+  width: 30px;
+  height: 30px;
+}
+.greeting {
+  display: inline;
+}
+a {
+  text-decoration: none;
+}
+.nav-btn{
+  display: inline-block;
+  align-self: center;
+  background-color:var(--color-primary);
+  padding: 10px;
+  color: white;
+  height: fit-content;
+  border: none;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  form {
+    min-width: 400px;
+  }
+  .reset-form {
+    min-width: 80%;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .reset-form {
+    min-width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .reset-form {
+    min-width: 40%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .reset-form {
+    min-width: 30%;
+  }
 }
